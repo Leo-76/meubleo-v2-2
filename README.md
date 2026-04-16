@@ -1,30 +1,28 @@
-# 🛋️ Meubleo Shop v2
+#  Meubleo Shop v2
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/meubleo/shop.svg?style=flat-square)](https://packagist.org/packages/meubleo/shop)
 [![PHP](https://img.shields.io/packagist/php-v/meubleo/shop.svg?style=flat-square)](https://packagist.org/packages/meubleo/shop)
 [![License](https://img.shields.io/github/license/meubleo/shop.svg?style=flat-square)](LICENSE)
 
-E-commerce platform for furniture shops built on top of Laravel.  
-**Architecture inspired by [Orchid Platform](https://orchid.software)** — Screen-based admin panel, fluent Field/TD API, publishable stubs.
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---|---|
-| 🖥️ **Screen-based admin** | Each admin page is a `Screen` class with `query()`, `commandBar()`, `layout()` |
-| 🧩 **Fluent Field API** | `Input::make('name')->title('Name')->required()->placeholder('...')` |
-| 📋 **Table/Rows Layouts** | `TD::make('price')->sort()->alignRight()->render(fn($p) => ...)` |
-| 🛒 **Full e-commerce** | Catalogue, cart, Stripe checkout, order management |
-| 🎛️ **Multi-ServiceProvider** | `FoundationServiceProvider` → chains console, routes, platform providers |
-| 🔧 **Artisan commands** | `meubleo:install`, `meubleo:admin`, `meubleo:screen`, `meubleo:table`, `meubleo:rows`, `meubleo:filter` |
-| 📦 **Publishable stubs** | Screens, Layouts, Filters published to `app/Meubleo/` |
-| 🌍 **i18n ready** | JSON translation files in `resources/lang/` |
+|  **Screen-based admin** | Each admin page is a `Screen` class with `query()`, `commandBar()`, `layout()` |
+|  **Fluent Field API** | `Input::make('name')->title('Name')->required()->placeholder('...')` |
+|  **Table/Rows Layouts** | `TD::make('price')->sort()->alignRight()->render(fn($p) => ...)` |
+|  **Full e-commerce** | Catalogue, cart, Stripe checkout, order management |
+|  **Multi-ServiceProvider** | `FoundationServiceProvider` → chains console, routes, platform providers |
+|  **Artisan commands** | `meubleo:install`, `meubleo:admin`, `meubleo:screen`, `meubleo:table`, `meubleo:rows`, `meubleo:filter` |
+|  **Publishable stubs** | Screens, Layouts, Filters published to `app/Meubleo/` |
+|  **i18n ready** | JSON translation files in `resources/lang/` |
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 ```bash
 composer require meubleo/shop
@@ -46,7 +44,7 @@ php artisan meubleo:admin "John Doe" john@example.com secret123
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 After install, edit `config/meubleo.php`:
 
@@ -67,7 +65,7 @@ return [
 
 ---
 
-## 🧩 Screen pattern
+##  Screen pattern
 
 Create a screen:
 ```bash
@@ -99,7 +97,7 @@ class ProductListScreen extends Screen
 
 ---
 
-## 📋 Table layout
+## Table layout
 
 ```bash
 php artisan meubleo:table ProductTableLayout
@@ -126,7 +124,7 @@ class ProductTableLayout extends Table
 
 ---
 
-## 📝 Rows layout (forms)
+##  Rows layout (forms)
 
 ```bash
 php artisan meubleo:rows ProductFormLayout
@@ -151,7 +149,7 @@ class ProductFormLayout extends Rows
 
 ---
 
-## 📦 Artisan commands
+##  Artisan commands
 
 | Command | Description |
 |---|---|
@@ -165,7 +163,7 @@ class ProductFormLayout extends Rows
 
 ---
 
-## 🗂️ Package structure
+##  Package structure
 
 ```
 src/
@@ -208,12 +206,12 @@ stubs/app/Meubleo/               ← Published to app/Meubleo/ on install
 
 ---
 
-## 💳 Stripe test card
+##  Stripe test card
 
 `4242 4242 4242 4242` — any future date, any CVV.
 
 ---
 
-## 📜 License
+##  License
 
 MIT
