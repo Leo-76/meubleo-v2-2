@@ -1,0 +1,44 @@
+// ─── Meubleo Design Tokens ─────────────────────────────────────────────────
+
+// Colours
+$primary:        #5C4A32;
+$primary-hover:  #3E3120;
+$accent:         #C4A35A;
+$danger:         #B85450;
+$success:        #4A7C59;
+$warning:        #D4933B;
+$info:           #3B8BD4;
+
+$bg:             #FAF8F4;
+$surface:        #FFFFFF;
+$border:         #E8E2D8;
+$text:           #2C2416;
+$muted:          #8A8070;
+
+// Typography
+$font-display:   'Cormorant Garamond', Georgia, serif;
+$font-body:      'DM Sans', system-ui, sans-serif;
+
+// Layout
+$sidebar-width:  240px;
+$radius:         6px;
+$shadow:         0 2px 16px rgba(44, 36, 22, .08);
+$shadow-lg:      0 8px 40px rgba(44, 36, 22, .14);
+$transition:     .2s ease;
+
+// Bootstrap overrides
+$primary-bs:     $primary;
+$border-radius:  $radius;
+$font-family-base: $font-body;
+
+// Export as CSS variables too
+:root {
+    --mb-primary:   #{$primary};
+    --mb-accent:    #{$accent};
+    --mb-bg:        #{$bg};
+    --mb-border:    #{$border};
+    --mb-muted:     #{$muted};
+    --mb-text:      #{$text};
+    --mb-surface:   #{$surface};
+    --mb-radius:    #{$radius};
+}

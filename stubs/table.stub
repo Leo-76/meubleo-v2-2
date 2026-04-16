@@ -1,0 +1,26 @@
+<?php
+
+namespace DummyNamespace;
+
+use Meubleo\Screen\Layouts\Table;
+use Meubleo\Screen\TD;
+
+class DummyClass extends Table
+{
+    /**
+     * The key in the Screen query() that holds the data.
+     */
+    protected string $target = 'items';
+
+    /**
+     * Define table columns.
+     */
+    protected function columns(): iterable
+    {
+        return [
+            TD::make('id', '#')->sort()->width('60px'),
+            TD::make('name', 'Name')->sort(),
+            TD::make('created_at', 'Created')->sort(),
+        ];
+    }
+}

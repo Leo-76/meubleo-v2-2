@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<psalm
+    errorLevel="4"
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+    findUnusedVariablesAndParams="false"
+    checkForThrowsDocblock="false"
+>
+    <projectFiles>
+        <directory name="src"/>
+        <ignoreFiles>
+            <directory name="vendor"/>
+            <directory name="stubs"/>
+            <directory name="public"/>
+            <directory name="tests"/>
+        </ignoreFiles>
+    </projectFiles>
+
+    <plugins>
+        <pluginClass class="Psalm\LaravelPlugin\Plugin"/>
+    </plugins>
+
+    <issueHandlers>
+
+        <MissingReturnType errorLevel="info"/>
+        <MissingParamType  errorLevel="info"/>
+        <PropertyNotSetInConstructor errorLevel="info"/>
+
+        <!-- Laravel magic -->
+        <UnresolvableInclude errorLevel="suppress"/>
+        <MixedInferredReturnType errorLevel="suppress"/>
+        <MixedReturnStatement    errorLevel="suppress"/>
+        <MixedMethodCall         errorLevel="suppress"/>
+        <MixedArgument           errorLevel="suppress"/>
+        <MixedAssignment         errorLevel="suppress"/>
+        <MixedArrayAccess        errorLevel="suppress"/>
+        <MixedPropertyFetch      errorLevel="suppress"/>
+        <MixedOperand            errorLevel="suppress"/>
+
+    </issueHandlers>
+</psalm>

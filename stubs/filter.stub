@@ -1,0 +1,22 @@
+<?php
+
+namespace DummyNamespace;
+
+use Meubleo\Filters\Filter;
+use Illuminate\Database\Eloquent\Builder;
+
+class DummyClass extends Filter
+{
+    /**
+     * The query string key this filter listens to.
+     */
+    public string $key = 'dummy';
+
+    /**
+     * Apply the filter to the query.
+     */
+    public function run(Builder $builder): Builder
+    {
+        return $builder->where('name', 'like', '%' . $this->value . '%');
+    }
+}

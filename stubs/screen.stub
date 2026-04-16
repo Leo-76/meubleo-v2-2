@@ -1,0 +1,49 @@
+<?php
+
+namespace DummyNamespace;
+
+use Meubleo\Screen\Actions\Button;
+use Meubleo\Screen\Actions\Link;
+use Meubleo\Screen\Screen;
+
+class DummyClass extends Screen
+{
+    public ?string $name        = 'DummyClass';
+    public ?string $description = null;
+
+    /**
+     * Fetch data to be displayed on the screen.
+     */
+    public function query(): iterable
+    {
+        return [];
+    }
+
+    /**
+     * Action buttons displayed in the header.
+     */
+    public function commandBar(): iterable
+    {
+        return [
+            Button::make('Save')
+                ->icon('bs.save')
+                ->method('save'),
+        ];
+    }
+
+    /**
+     * The screen's layout elements.
+     */
+    public function layout(): iterable
+    {
+        return [];
+    }
+
+    /**
+     * Handle form save action.
+     */
+    public function save(): void
+    {
+        //
+    }
+}

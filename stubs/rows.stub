@@ -1,0 +1,22 @@
+<?php
+
+namespace DummyNamespace;
+
+use Meubleo\Screen\Fields\Input;
+use Meubleo\Screen\Layouts\Rows;
+
+class DummyClass extends Rows
+{
+    /**
+     * Define the form fields.
+     */
+    protected function fields(): iterable
+    {
+        return [
+            Input::make('name')
+                ->title('Name')
+                ->placeholder('Enter name')
+                ->required(),
+        ];
+    }
+}

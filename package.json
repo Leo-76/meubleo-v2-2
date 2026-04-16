@@ -1,0 +1,39 @@
+{
+    "name": "meubleo-shop",
+    "version": "2.0.0",
+    "description": "Meubleo Shop — JS/CSS build pipeline",
+    "private": true,
+    "scripts": {
+        "dev":   "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot":   "mix watch --hot",
+        "prod":  "npm run production",
+        "production": "mix --production",
+        "lint":  "eslint resources/js/**/*.js"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.18.6",
+        "@babel/plugin-transform-runtime": "^7.22.0",
+        "@babel/preset-env": "^7.22.0",
+        "@hotwired/stimulus": "^3.2.2",
+        "autoprefixer": "^10.4.14",
+        "babel-loader": "^9.1.2",
+        "cross-env": "^7.0.3",
+        "eslint": "^8.43.0",
+        "laravel-mix": "^6.0.49",
+        "postcss": "^8.4.24",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.63.4",
+        "sass-loader": "^13.3.2"
+    },
+    "dependencies": {
+        "@quill/quill": "^2.0.0",
+        "bootstrap": "^5.3.0",
+        "bootstrap-icons": "^1.10.5",
+        "flatpickr": "^4.6.13",
+        "sortablejs": "^1.15.0",
+        "tom-select": "^2.2.2"
+    }
+}

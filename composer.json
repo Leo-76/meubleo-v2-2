@@ -1,0 +1,77 @@
+{
+    "name": "meubleo/shop",
+    "description": "E-commerce platform for furniture shops — admin panel, catalog, cart, orders and Stripe payments for your Laravel app.",
+    "keywords": [
+        "laravel", "ecommerce", "furniture", "shop", "admin", "platform", "cms"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/meubleo/shop",
+    "support": {
+        "issues": "https://github.com/meubleo/shop/issues",
+        "source": "https://github.com/meubleo/shop",
+        "docs":   "https://meubleo.github.io/docs"
+    },
+    "authors": [
+        {
+            "name":     "Meubleo",
+            "email":    "dev@meubleo.fr",
+            "homepage": "https://meubleo.fr",
+            "role":     "Developer"
+        }
+    ],
+    "require": {
+        "php":                  "^8.2",
+        "composer-runtime-api": "^2.2",
+        "laravel/framework":    "^11.0 || ^12.0",
+        "stripe/stripe-php":    "^13.0"
+    },
+    "require-dev": {
+        "fakerphp/faker":              "^1.23",
+        "laravel/pint":                "^1.14",
+        "orchestra/testbench":         "^9.0 || ^10.0",
+        "orchestra/testbench-core":    "^9.0 || ^10.0",
+        "phpunit/phpunit":             "^11.0 || ^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Meubleo\\Access\\":   "src/Access/",
+            "Meubleo\\Filters\\":  "src/Filters/",
+            "Meubleo\\Metrics\\":  "src/Metrics/",
+            "Meubleo\\Platform\\": "src/Platform/",
+            "Meubleo\\Screen\\":   "src/Screen/",
+            "Meubleo\\Support\\":  "src/Support/"
+        },
+        "files": [
+            "src/Support/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Meubleo\\Platform\\Database\\Factories\\": "database/factories/",
+            "Meubleo\\Platform\\Database\\Seeders\\":   "database/seeders/",
+            "Meubleo\\Tests\\":                         "tests/",
+            "App\\":                                    "stubs/app/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Meubleo\\Platform\\Providers\\FoundationServiceProvider"
+            ],
+            "aliases": {
+                "MeubleoShop": "Meubleo\\Support\\Facades\\Shop",
+                "MeubleoCart": "Meubleo\\Support\\Facades\\Cart"
+            }
+        }
+    },
+    "suggest": {
+        "meubleo/reviews": "Customer reviews and ratings module.",
+        "meubleo/wishlist": "Wishlist module for authenticated users."
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
