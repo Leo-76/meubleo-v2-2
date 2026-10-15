@@ -26,7 +26,7 @@
         "postcss": "^8.4.24",
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.63.4",
-        "sass-loader": "^13.3.2"
+        "sass-loader": "^17.0.1"
     },
     "dependencies": {
         "@quill/quill": "^2.0.0",
