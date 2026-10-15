@@ -1,5 +1,5 @@
 {
-    "name": "leo-76/meubleo-v2-2",
+    "name": "meubleo/shop",
     "description": "E-commerce platform for furniture shops — admin panel, catalog, cart, orders and Stripe payments for your Laravel app.",
     "keywords": [
         "laravel", "ecommerce", "furniture", "shop", "admin", "platform", "cms"
